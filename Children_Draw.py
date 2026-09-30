@@ -1,6 +1,6 @@
 
 import os
-import gdown
+#import gdown
 import streamlit as st
 
 import torch

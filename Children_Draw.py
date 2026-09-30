@@ -18,7 +18,20 @@ from torchvision.models import ResNet18_Weights
 # 1. MODEL PATH
 # ====================================================
 
-MODEL_PATH = r"C:\Users\Engy\Downloads\best_model.pth"
+#MODEL_PATH = r"C:\Users\Engy\Downloads\best_model.pth"
+MODEL_PATH = "best_model.pth"
+
+GOOGLE_DRIVE_FILE_ID = "13RFARSgdKXkXwggmbpLxR-7gZl5aSDmq"
+
+if not os.path.exists(MODEL_PATH):
+
+    gdown.download(
+        f"https://drive.google.com/uc?id={GOOGLE_DRIVE_FILE_ID}",
+        MODEL_PATH,
+        quiet=False
+    )
+
+
 
 
 st.markdown(
